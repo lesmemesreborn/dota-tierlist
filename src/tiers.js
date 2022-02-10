@@ -96,11 +96,14 @@ export default function TierS({navigation}) {
                 backgroundColor: '#2471A3',
                 paddingVertical: 10,
                 paddingHorizontal: 10,
-                borderRadius: 2,
                 display: 'flex',
                 flexDirection: 'row',
                 alignItems: 'center',
-                borderWidth: 1,
+                borderWidth: 3,
+                marginLeft: 3,
+                marginRight: 3,
+                marginTop: 5,
+                borderColor: '#212F3D'
               }}
             >
               <Image
@@ -113,7 +116,7 @@ export default function TierS({navigation}) {
                   fontWeight: '700',
                   fontSize: 20,
                   textShadowColor: 'navy',
-                  textShadowRadius: 2
+                  textShadowRadius: 2,
                 }}
               >
                 {data.item.name}

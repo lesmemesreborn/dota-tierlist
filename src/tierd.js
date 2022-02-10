@@ -107,11 +107,14 @@ export default function TierD({navigation}) {
                 backgroundColor: '#2471A3',
                 paddingVertical: 10,
                 paddingHorizontal: 10,
-                borderRadius: 2,
                 display: 'flex',
                 flexDirection: 'row',
                 alignItems: 'center',
-                borderWidth: 1,
+                borderWidth: 3,
+                marginLeft: 3,
+                marginRight: 3,
+                marginTop: 5,
+                borderColor: '#212F3D'
               }}
             >
               <Image
