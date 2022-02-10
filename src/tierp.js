@@ -7,24 +7,53 @@ import {
   Text, TouchableOpacity, View, 
 } from 'react-native';
 import { FlatList } from 'react-native-gesture-handler';
-import Background from './etc/back.png';
 import {LinearGradient} from 'expo-linear-gradient'
 
 
-export default function TierSS( {navigation}) {
+export default function TierP( {navigation}) {
   
-  const imagebg =  Background
   const [heroData] = useState([
     {
       img: 'https://static.wikia.nocookie.net/dota2_gamepedia/images/d/d1/Tinker_icon.png',
-      id: 34,
+      id: 1034,
       name: 'Tinker',
-      desc: 'Абсолютно нечестный герой в нынешнем патче. Что при себе имеет: \n - Слишком большой урон с двух кнопок; \n - Меньшую зависимость от таймингов (травела теперь не нужны); \n - Сломанную матрицу, являющуюся кошмаром во плоти (максимум резиста к станам и урону, возможность блинковаться из-под периодического урона); \n - Аганим с АоЕ. \n - Слишком сильный герой в патче. Винрейт 55%+ на всех рейтингах, это жесть. '
+      desc: 'Ебучий герой говна. Нахуй тревела, нахуй мозги, жми q-w-шива-реарм и соси хуй дальше. Чё хуесос, 6к апнул на тинкере? А если он в бане, че как на паджике 0-20 бегать?)) хуесос лсный, если пикаешь тинкера, выйди в окно нахуй, хуесос.'
     },
+    {
+        img: 'https://static.wikia.nocookie.net/dota2_gamepedia/images/0/09/Weaver_icon.png/revision/latest/scale-to-width-down/256?cb=20160411214233',
+        id: 1063,
+        name: 'Weaver',
+        desc: 'Шушушушушушушу, посмотрите на меня, я выблядок с бессмертными жуками и триллионом урона на лейн-стадии)) как вам такое блять, хуесосы???'
+      },
+      {
+        img: 'https://static.wikia.nocookie.net/dota2_gamepedia/images/1/10/Outworld_Destroyer_icon.png/revision/latest/scale-to-width-down/256?cb=20160411220923',
+        id: 1076,
+        name: 'Outworld Devourer',
+        desc: 'ЫЫЫЫЫЫЫ, астрал+метеор, ЫЫЫЫЫЫЫЫ, ОД не имба, ыЫЫЫЫЫЫ, хуле БКБ не покупаете ЫЫЫЫЫЫ, а бля у меня метеор на шестой, а бкб 4к стоит? ЫЫЫЫЫЫЫЫЫ посмотрите на меня я сильный игрок научился метеор в астрал давать, а вы хуета лсная ЫЫЫЫЫ'
+      },
+      {
+        img: 'https://static.wikia.nocookie.net/dota2_gamepedia/images/d/df/Spirit_Breaker_icon.png/revision/latest/scale-to-width-down/256?cb=20160411212138',
+        id: 1071,
+        name: 'Spirit Breaker',
+        desc: 'Нажал чардж - побежал к своему парню.'
+      },
+      {
+        img: 'https://static.wikia.nocookie.net/dota2_gamepedia/images/c/c3/Bane_icon.png/revision/latest/scale-to-width-down/256?cb=20160411215925',
+        id: 1003,
+        name: 'Bane',
+        desc: 'Сосёт хп так, как ты хуй у своего парня'
+      },
+      {
+        img: 'https://static.wikia.nocookie.net/dota2_gamepedia/images/f/fa/Techies_icon.png/revision/latest/scale-to-width-down/256?cb=20160411215855',
+        id: 1105,
+        name: 'Techies',
+        desc: 'Улучшаем комьюнити))) теперь это ЛГБТ-комьюнити))) Слава пидорасам)))'
+      },
+
   ]);
   const [modalWindow, setModalWindow] = useState(false)
   return (
-    <LinearGradient colors={['#154360', '#1F618D', '#2980B9', '#5DADE2']} style={styles.linearGradient}>
+    <LinearGradient colors={['#FF0018', '#FFA52C', '#FFFF41', '#008018', '#0000F9', '#86007D']} style={styles.linearGradient}>
     <View>
        
         {/* <ImageBackground source={imagebg} resizeMode="cover" style={styles.image}> */}
@@ -51,7 +80,7 @@ export default function TierSS( {navigation}) {
              
             <View
               style={{
-                backgroundColor: '#2471A3',
+                backgroundColor: 'transparent',
                 paddingVertical: 10,
                 paddingHorizontal: 10,
                 borderRadius: 2,

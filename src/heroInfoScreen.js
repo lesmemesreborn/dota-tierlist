@@ -4,31 +4,30 @@ import {
 } from 'react-native';
 import Background from './etc/back.png'
 import { Divider } from "@react-native-material/core";
+import {LinearGradient} from 'expo-linear-gradient'
 
 const heroInfo = ({route}) => {
     // const {state} = useState(null)
     const hero = route.params
     const imagebg =  Background
-    
-    return (
 
+    return (
+      <LinearGradient colors={['#154360', '#1F618D', '#2980B9', '#5DADE2']} style={styles.linearGradient}>
         <View style={styles.background}>
-             <ImageBackground source={imagebg} resizeMode="cover" style={styles.image}>
             <Text style={styles.descTitle}>{hero.name}</Text>
             <Divider color='black' />
             <Image style={styles.descImage} source={{uri: hero.img}} />
             <Divider color='black'/>
-            <Text style={{textAlign:'center', marginTop: 5}}>OПИСАНИЕ: </Text>
+            <Text style={styles.descSubTitle}>OПИСАНИЕ: </Text>
             <Text style={styles.descDesc}>{hero.desc}</Text>
             <Divider color='black'/>
-            </ImageBackground>
         </View>
+        </LinearGradient>
     )
 }
 
 const styles = StyleSheet.create({
     background: {
-      backgroundColor:'#a22511', 
       flex: 1
     },
     image: {
@@ -38,12 +37,25 @@ const styles = StyleSheet.create({
       backgroundColor:'#a22511', 
       flex: 1
     },
-  
     descTitle: {
-      fontSize: 24,
+      fontSize: 28,
       textAlign: "center",
       marginTop: 10,
-      marginBottom: 10
+      marginBottom: 10,
+      letterSpacing: 3,
+      fontWeight: 'bold',
+      color: '#CB4335',
+      textTransform: 'uppercase',
+      textShadowColor: 'black',
+      textShadowRadius: 7,
+    },
+    descSubTitle: {
+      textAlign:'center',
+       marginTop: 5,
+        fontWeight: 'bold',
+         fontSize: 18,
+      textShadowColor: 'black',
+      textShadowRadius: 2,
     },
     descImage: {
       width: 220,
@@ -57,10 +69,14 @@ const styles = StyleSheet.create({
       marginLeft: 10,
       marginRight: 10,
       marginTop: 15,
+      fontStyle:'italic'
     },
     descBack: {
       alignSelf: "center",
-    }
+    },
+    linearGradient: {
+      flex: 1,
+    },
   })
 
 export default heroInfo

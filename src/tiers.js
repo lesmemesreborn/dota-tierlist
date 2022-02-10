@@ -12,6 +12,7 @@ import Background from './etc/back.png'
 import { Ionicons } from '@expo/vector-icons';
 import { FlatList } from 'react-native-gesture-handler';
 import { FontAwesome5 } from '@expo/vector-icons';
+import {LinearGradient} from 'expo-linear-gradient'
 
 export default function TierS({navigation}) {
   const imagebg =  Background
@@ -67,8 +68,9 @@ export default function TierS({navigation}) {
   ]);
   const [modalWindow, setModalWindow] = useState(false)
   return (
+    <LinearGradient colors={['#154360', '#1F618D', '#2980B9', '#5DADE2']} style={styles.linearGradient}>
     <View style={styles.background}>
-      <ImageBackground source={imagebg} resizeMode="cover" style={styles.image}>
+      
        <FlatList
         data={heroData}
         keyExtractor={data => data.id}
@@ -91,7 +93,7 @@ export default function TierS({navigation}) {
           >
             <View
               style={{
-                backgroundColor: '#af3118',
+                backgroundColor: '#2471A3',
                 paddingVertical: 10,
                 paddingHorizontal: 10,
                 borderRadius: 2,
@@ -102,14 +104,16 @@ export default function TierS({navigation}) {
               }}
             >
               <Image
-                style={{ width: 80, height: 40, borderRadius: 50 }}
+                style={{ width: 80, height: 40, borderRadius: 10 }}
                 source={{ uri: data.item.img }}
               />
               <Text
                 style={{
                   marginLeft: 10,
-                  fontWeight: '400',
+                  fontWeight: '700',
                   fontSize: 20,
+                  textShadowColor: 'navy',
+                  textShadowRadius: 2
                 }}
               >
                 {data.item.name}
@@ -119,14 +123,14 @@ export default function TierS({navigation}) {
           </>
         )}
      />
-     </ImageBackground>
+    
     </View>
+    </LinearGradient>
   )
 }
 
 const styles = StyleSheet.create({
   background: {
-    backgroundColor:'#a22511', 
     flex: 1
   },
   image: {
@@ -155,5 +159,9 @@ const styles = StyleSheet.create({
   },
   modalBack: {
     alignSelf: "center",
-  }
+  },
+  linearGradient: {
+    flex: 1,
+
+  },
 })

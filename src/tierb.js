@@ -5,6 +5,7 @@ import {
 } from 'react-native';
 import { FlatList } from 'react-native-gesture-handler';
 import Background from './etc/back.png';
+import {LinearGradient} from 'expo-linear-gradient'
 
 export default function TierB({navigation}) {
   const imagebg =  Background
@@ -204,8 +205,9 @@ export default function TierB({navigation}) {
   ]);
   
   return (
+    <LinearGradient colors={['#154360', '#1F618D', '#2980B9', '#5DADE2']} style={styles.linearGradient}>
     <View style={styles.background}>
-      <ImageBackground source={imagebg} resizeMode="cover" style={styles.image}>
+     
        <FlatList
         data={heroData}
         renderItem={(data) => (
@@ -214,7 +216,7 @@ export default function TierB({navigation}) {
           >
             <View
               style={{
-                backgroundColor: '#af3118',
+                backgroundColor: '#2471A3',
                 paddingVertical: 10,
                 paddingHorizontal: 10,
                 borderRadius: 2,
@@ -225,14 +227,16 @@ export default function TierB({navigation}) {
               }}
             >
               <Image
-                style={{ width: 80, height: 40, borderRadius: 50 }}
+                style={{ width: 80, height: 40, borderRadius: 10 }}
                 source={{ uri: data.item.img }}
               />
               <Text
                 style={{
                   marginLeft: 10,
-                  fontWeight: '400',
+                  fontWeight: '700',
                   fontSize: 20,
+                  textShadowColor: 'navy',
+                  textShadowRadius: 2
                 }}
               >
                 {data.item.name}
@@ -241,14 +245,14 @@ export default function TierB({navigation}) {
           </TouchableOpacity>
         )}
       />
-      </ImageBackground>
+     
     </View>
+    </LinearGradient>
   )
 }
 
 const styles = StyleSheet.create({
   background: {
-    backgroundColor:'#a22511', 
     flex: 1
   },
   image: {
@@ -277,5 +281,9 @@ const styles = StyleSheet.create({
   },
   modalBack: {
     alignSelf: "center",
-  }
+  },
+  linearGradient: {
+    flex: 1,
+
+  },
 })
