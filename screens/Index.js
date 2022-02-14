@@ -6,102 +6,112 @@ import heroBase from './heroBase'
 import heroData from '../heroes'
 import TierP from './Tierp'
 
-
-
-
 const IndexScreen = ({ navigation, route }) => {
-
   //скролл вью должно оборачивать все а не градиент
   return (
-  <ScrollView>
-    <LinearGradient
-      colors={['#154360', '#1F618D', '#2980B9', '#5DADE2']}
-      style={styles.linearGradient}
-    >
-      <Card style={styles.card} onPress={() => navigation.navigate('TierSS', {heroData: {tier: 'SSS'}})
-      }>
-        <Card.Content style={styles.item}>
-          <Card.Cover
-            style={styles.body_cover}
-            source={{ uri: 'https://i.ibb.co/jT6grZV/sss.png' }}
-          />
-
-          <Title style={styles.title}>TIER SS+</Title>
-        </Card.Content>
-      </Card>
-
-      <Card style={styles.card} onPress={() => navigation.navigate('TierS')}>
-        <Card.Content style={styles.item}>
-          <Card.Cover
-            style={styles.body_cover}
-            source={{ uri: 'https://i.ibb.co/Pr46Qvq/s1.png' }}
-          />
-          <Title style={styles.title}>TIER S</Title>
-        </Card.Content>
-      </Card>
-      <Card style={styles.card} onPress={() => navigation.navigate('TierA')}>
-        <Card.Content style={styles.item}>
-          <Card.Cover
-            style={styles.body_cover}
-            source={{ uri: 'https://i.ibb.co/NthfY6q/a2.png' }}
-          />
-          <Title style={styles.title}>TIER A</Title>
-        </Card.Content>
-      </Card>
-      <Card style={styles.card} onPress={() => navigation.navigate('TierB')}>
-        <Card.Content style={styles.item}>
-          <Card.Cover
-            style={styles.body_cover}
-            source={{ uri: 'https://i.ibb.co/vHXcDv3/b1.png' }}
-          />
-          <Title style={styles.title}>TIER B</Title>
-        </Card.Content>
-      </Card>
-      <Card style={styles.card} onPress={() => navigation.navigate('TierC')}>
-        <Card.Content style={styles.item}>
-          <Card.Cover
-            style={styles.body_cover}
-            source={{ uri: 'https://i.ibb.co/DtBLKmj/c1.png' }}
-          />
-          <Title style={styles.title}>TIER C</Title>
-        </Card.Content>
-      </Card>
-      <Card style={styles.card} onPress={() => navigation.navigate('TierD')}>
-        <Card.Content style={styles.item}>
-          <Card.Cover
-            style={styles.body_cover}
-            source={{ uri: 'https://i.ibb.co/cyy5jkj/d1.png' }}
-          />
-          <Title style={styles.title}>TIER D</Title>
-        </Card.Content>
-      </Card>
-      <Card style={styles.card} onPress={() => navigation.navigate('TierG')}>
-        <Card.Content style={styles.item}>
-          <Card.Cover
-            style={styles.body_cover}
-            source={{ uri: 'https://i.ibb.co/rZcsBpD/g1.png' }}
-          />
-          <Title style={styles.title}>TIER G</Title>
-        </Card.Content>
-      </Card>
-      <Card
-        style={styles.card}
-        onPress={() => navigation.navigate('AboutScreen')}
+    <ScrollView>
+      <LinearGradient
+        colors={['#154360', '#1F618D', '#2980B9', '#5DADE2']}
+        style={styles.linearGradient}
       >
-        <Card.Content style={styles.item}>
-          <Card.Cover
-            style={styles.body_cover}
-            source={{ uri: 'https://i.ibb.co/0txy3F5/about2.png' }}
-          />
-          <Title lineBreakMode='clip' numberOfLines={1} style={styles.title}>
-            О приложении
-          </Title>
-        </Card.Content>
-      </Card>
-    </LinearGradient>
-  </ScrollView>
-)
-  }
+        <Card
+          style={styles.card}
+          onPress={() =>
+            navigation.navigate('HeroesList', {
+              heroes: heroData.filter((item) => item.tier === 'SSS'),
+              headerTitle: 'ХУЙ',
+            })
+          }
+        >
+          <Card.Content style={styles.item}>
+            <Card.Cover
+              style={styles.body_cover}
+              source={{ uri: 'https://i.ibb.co/jT6grZV/sss.png' }}
+            />
+
+            <Title style={styles.title}>TIER SS+</Title>
+          </Card.Content>
+        </Card>
+
+        <Card
+          style={styles.card}
+          onPress={() =>
+            navigation.navigate('HeroesList', {
+              heroes: heroData.filter((item) => item.tier === 'S'),
+            })
+          }
+        >
+          <Card.Content style={styles.item}>
+            <Card.Cover
+              style={styles.body_cover}
+              source={{ uri: 'https://i.ibb.co/Pr46Qvq/s1.png' }}
+            />
+            <Title style={styles.title}>TIER S</Title>
+          </Card.Content>
+        </Card>
+        <Card style={styles.card} onPress={() => navigation.navigate('TierA')}>
+          <Card.Content style={styles.item}>
+            <Card.Cover
+              style={styles.body_cover}
+              source={{ uri: 'https://i.ibb.co/NthfY6q/a2.png' }}
+            />
+            <Title style={styles.title}>TIER A</Title>
+          </Card.Content>
+        </Card>
+        <Card style={styles.card} onPress={() => navigation.navigate('TierB')}>
+          <Card.Content style={styles.item}>
+            <Card.Cover
+              style={styles.body_cover}
+              source={{ uri: 'https://i.ibb.co/vHXcDv3/b1.png' }}
+            />
+            <Title style={styles.title}>TIER B</Title>
+          </Card.Content>
+        </Card>
+        <Card style={styles.card} onPress={() => navigation.navigate('TierC')}>
+          <Card.Content style={styles.item}>
+            <Card.Cover
+              style={styles.body_cover}
+              source={{ uri: 'https://i.ibb.co/DtBLKmj/c1.png' }}
+            />
+            <Title style={styles.title}>TIER C</Title>
+          </Card.Content>
+        </Card>
+        <Card style={styles.card} onPress={() => navigation.navigate('TierD')}>
+          <Card.Content style={styles.item}>
+            <Card.Cover
+              style={styles.body_cover}
+              source={{ uri: 'https://i.ibb.co/cyy5jkj/d1.png' }}
+            />
+            <Title style={styles.title}>TIER D</Title>
+          </Card.Content>
+        </Card>
+        <Card style={styles.card} onPress={() => navigation.navigate('TierG')}>
+          <Card.Content style={styles.item}>
+            <Card.Cover
+              style={styles.body_cover}
+              source={{ uri: 'https://i.ibb.co/rZcsBpD/g1.png' }}
+            />
+            <Title style={styles.title}>TIER G</Title>
+          </Card.Content>
+        </Card>
+        <Card
+          style={styles.card}
+          onPress={() => navigation.navigate('AboutScreen')}
+        >
+          <Card.Content style={styles.item}>
+            <Card.Cover
+              style={styles.body_cover}
+              source={{ uri: 'https://i.ibb.co/0txy3F5/about2.png' }}
+            />
+            <Title lineBreakMode='clip' numberOfLines={1} style={styles.title}>
+              О приложении
+            </Title>
+          </Card.Content>
+        </Card>
+      </LinearGradient>
+    </ScrollView>
+  )
+}
 
 const styles = {
   body: {

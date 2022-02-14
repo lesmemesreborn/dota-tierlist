@@ -12,10 +12,11 @@ import {
 import { FlatList } from 'react-native-gesture-handler'
 import heroData from '../heroes'
 
-export default function heroBase({ navigation, route }) {
-  
-
+const heroBase = ({ navigation, route }) => {
   const [modalWindow, setModalWindow] = useState(false)
+
+  const { heroes } = route.params
+
   return (
     <LinearGradient
       colors={['#154360', '#1F618D', '#2980B9', '#5DADE2']}
@@ -23,7 +24,7 @@ export default function heroBase({ navigation, route }) {
     >
       <View>
         <FlatList
-          data={heroData}
+          data={heroes}
           keyExtractor={(data) => data.id}
           renderItem={(data) => (
             <>
@@ -135,3 +136,5 @@ const styles = StyleSheet.create({
     flex: 1,
   },
 })
+
+export default heroBase

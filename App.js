@@ -6,6 +6,8 @@ import * as React from 'react'
 import { useState } from 'react'
 import AboutScreen from './screens/AboutScreen'
 import Cabs from './screens/CabScreen'
+// import TierS from './screens/Tiers'
+import heroBase from './screens/heroBase'
 import heroInfo from './screens/HeroInfoScreen'
 import IndexScreen from './screens/Index'
 // import TierA from './screens/Tiera'
@@ -14,9 +16,6 @@ import IndexScreen from './screens/Index'
 // import TierD from './screens/Tierd'
 // import TierG from './screens/Tierg'
 import TierP from './screens/Tierp'
-// import TierS from './screens/Tiers'
-import heroBase from './screens/heroBase'
-import heroData from './heroes'
 
 const Stack = createNativeStackNavigator()
 
@@ -45,7 +44,7 @@ const App = () => {
         <Stack.Screen
           name='Index'
           component={IndexScreen}
-          options={({ navigation }) => ({
+          options={({ navigation, route }) => ({
             headerTitle: 'Dota 2 hero tierlist (7.30e)',
             headerStyle: {
               backgroundColor: '#85C1E9',
@@ -58,10 +57,10 @@ const App = () => {
           })}
         />
         <Stack.Screen
-          name='TierSS'
+          name='HeroesList'
           component={heroBase}
-          options={({ navigation }) => ({
-            headerTitle: 'Tier SS+ heroes (7.30e)',
+          options={({ route }) => ({
+            headerTitle: route.params.headerTitle || 'Heroes List',
             headerStyle: {
               backgroundColor: '#85C1E9',
             },
@@ -72,96 +71,7 @@ const App = () => {
             },
           })}
         />
-        <Stack.Screen
-          name='TierS'
-          component={heroBase}
-          options={({ navigation }) => ({
-            headerTitle: 'Tier S heroes (7.30e)',
-            headerStyle: {
-              backgroundColor: '#85C1E9',
-            },
-            headerTintColor: 'navy',
-            headerTitleStyle: {
-              fontWeight: '700',
-              fontSize: 24,
-            },
-          })}
-        />
-        <Stack.Screen
-          name='TierA'
-          component={heroBase}
-          options={({ navigation }) => ({
-            headerTitle: 'Tier A heroes (7.30e)',
-            headerStyle: {
-              backgroundColor: '#85C1E9',
-            },
-            headerTintColor: 'navy',
-            headerTitleStyle: {
-              fontWeight: '700',
-              fontSize: 24,
-            },
-          })}
-        />
-        <Stack.Screen
-          name='TierB'
-          component={heroBase}
-          options={({ navigation }) => ({
-            headerTitle: 'Tier B heroes (7.30e)',
-            headerStyle: {
-              backgroundColor: '#85C1E9',
-            },
-            headerTintColor: 'navy',
-            headerTitleStyle: {
-              fontWeight: '700',
-              fontSize: 24,
-            },
-          })}
-        />
-        <Stack.Screen
-          name='TierC'
-          component={heroBase}
-          options={({ navigation }) => ({
-            headerTitle: 'Tier C heroes (7.30e)',
-            headerStyle: {
-              backgroundColor: '#85C1E9',
-            },
-            headerTintColor: 'navy',
-            headerTitleStyle: {
-              fontWeight: '700',
-              fontSize: 24,
-            },
-          })}
-        />
-        <Stack.Screen
-          name='TierD'
-          component={heroBase}
-          options={({ navigation }) => ({
-            headerTitle: 'Tier D heroes (7.30e)',
-            headerStyle: {
-              backgroundColor: '#85C1E9',
-            },
-            headerTintColor: 'navy',
-            headerTitleStyle: {
-              fontWeight: '700',
-              fontSize: 24,
-            },
-          })}
-        />
-        <Stack.Screen
-          name='TierG'
-          component={heroBase}
-          options={({ navigation }) => ({
-            headerTitle: 'Tier G heroes (7.30e)',
-            headerStyle: {
-              backgroundColor: '#85C1E9',
-            },
-            headerTintColor: 'navy',
-            headerTitleStyle: {
-              fontWeight: '700',
-              fontSize: 24,
-            },
-          })}
-        />
+
         <Stack.Screen
           name='AboutScreen'
           component={AboutScreen}
