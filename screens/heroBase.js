@@ -10,16 +10,11 @@ import {
   View,
 } from 'react-native'
 import { FlatList } from 'react-native-gesture-handler'
+import heroData from '../heroes'
 
-export default function TierSS({ navigation }) {
-  const [heroData] = useState([
-    {
-      img: 'https://static.wikia.nocookie.net/dota2_gamepedia/images/d/d1/Tinker_icon.png',
-      id: 34,
-      name: 'Tinker',
-      desc: 'Абсолютно нечестный герой в нынешнем патче. Что при себе имеет: \n - Слишком большой урон с двух кнопок; \n - Меньшую зависимость от таймингов (травела теперь не нужны); \n - Сломанную матрицу, являющуюся кошмаром во плоти (максимум резиста к станам и урону, возможность блинковаться из-под периодического урона); \n - Аганим с АоЕ. \n - Слишком сильный герой в патче. Винрейт 55%+ на всех рейтингах, это жесть. ',
-    },
-  ])
+export default function heroBase({ navigation, route }) {
+  
+
   const [modalWindow, setModalWindow] = useState(false)
   return (
     <LinearGradient
@@ -27,7 +22,6 @@ export default function TierSS({ navigation }) {
       style={styles.linearGradient}
     >
       <View>
-        {/* <ImageBackground source={imagebg} resizeMode="cover" style={styles.image}> */}
         <FlatList
           data={heroData}
           keyExtractor={(data) => data.id}
@@ -99,8 +93,6 @@ export default function TierSS({ navigation }) {
             </>
           )}
         />
-
-        {/* </ImageBackground> */}
       </View>
     </LinearGradient>
   )

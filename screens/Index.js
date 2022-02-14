@@ -2,15 +2,24 @@ import { LinearGradient } from 'expo-linear-gradient'
 import * as React from 'react'
 import { ScrollView } from 'react-native'
 import { Card, Title } from 'react-native-paper'
+import heroBase from './heroBase'
+import heroData from '../heroes'
+import TierP from './Tierp'
 
-const IndexScreen = ({ navigation }) => (
+
+
+
+const IndexScreen = ({ navigation, route }) => {
+
   //скролл вью должно оборачивать все а не градиент
+  return (
   <ScrollView>
     <LinearGradient
       colors={['#154360', '#1F618D', '#2980B9', '#5DADE2']}
       style={styles.linearGradient}
     >
-      <Card style={styles.card} onPress={() => navigation.navigate('TierSS')}>
+      <Card style={styles.card} onPress={() => navigation.navigate('TierSS', {heroData: {tier: 'SSS'}})
+      }>
         <Card.Content style={styles.item}>
           <Card.Cover
             style={styles.body_cover}
@@ -92,6 +101,7 @@ const IndexScreen = ({ navigation }) => (
     </LinearGradient>
   </ScrollView>
 )
+  }
 
 const styles = {
   body: {
@@ -124,11 +134,11 @@ const styles = {
     marginTop: 10,
     marginLeft: 5,
     padding: 5,
-    // fontSize: 32, огромный шрифт не указан шрифт какой
+    fontSize: 24,
     // fontFamily: 'Beaumarchais', пример подключения шрифтов подкюлчать везде
     fontFamily: 'Open Sans',
     // fontFamily: 'Karlo Cham',
-    fontSize: 16,
+    // fontSize: 16,
     width: 280,
     maxWidth: '100%',
     height: '90%',

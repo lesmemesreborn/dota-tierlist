@@ -4,18 +4,19 @@ import AppLoading from 'expo-app-loading'
 import * as Font from 'expo-font'
 import * as React from 'react'
 import { useState } from 'react'
-import AboutScreen from './screens/aboutScreen'
-import Cabs from './screens/cabScreen'
-import heroInfo from './screens/heroInfoScreen'
+import AboutScreen from './screens/AboutScreen'
+import Cabs from './screens/CabScreen'
+import heroInfo from './screens/HeroInfoScreen'
 import IndexScreen from './screens/Index'
-import TierA from './screens/Tiera'
-import TierB from './screens/Tierb'
-import TierC from './screens/Tierc'
-import TierD from './screens/Tierd'
-import TierG from './screens/Tierg'
+// import TierA from './screens/Tiera'
+// import TierB from './screens/Tierb'
+// import TierC from './screens/Tierc'
+// import TierD from './screens/Tierd'
+// import TierG from './screens/Tierg'
 import TierP from './screens/Tierp'
-import TierS from './screens/Tiers'
-import TierSS from './screens/Tierss'
+// import TierS from './screens/Tiers'
+import heroBase from './screens/heroBase'
+import heroData from './heroes'
 
 const Stack = createNativeStackNavigator()
 
@@ -58,7 +59,7 @@ const App = () => {
         />
         <Stack.Screen
           name='TierSS'
-          component={TierSS}
+          component={heroBase}
           options={({ navigation }) => ({
             headerTitle: 'Tier SS+ heroes (7.30e)',
             headerStyle: {
@@ -73,7 +74,7 @@ const App = () => {
         />
         <Stack.Screen
           name='TierS'
-          component={TierS}
+          component={heroBase}
           options={({ navigation }) => ({
             headerTitle: 'Tier S heroes (7.30e)',
             headerStyle: {
@@ -88,7 +89,7 @@ const App = () => {
         />
         <Stack.Screen
           name='TierA'
-          component={TierA}
+          component={heroBase}
           options={({ navigation }) => ({
             headerTitle: 'Tier A heroes (7.30e)',
             headerStyle: {
@@ -103,7 +104,7 @@ const App = () => {
         />
         <Stack.Screen
           name='TierB'
-          component={TierB}
+          component={heroBase}
           options={({ navigation }) => ({
             headerTitle: 'Tier B heroes (7.30e)',
             headerStyle: {
@@ -118,7 +119,7 @@ const App = () => {
         />
         <Stack.Screen
           name='TierC'
-          component={TierC}
+          component={heroBase}
           options={({ navigation }) => ({
             headerTitle: 'Tier C heroes (7.30e)',
             headerStyle: {
@@ -133,7 +134,7 @@ const App = () => {
         />
         <Stack.Screen
           name='TierD'
-          component={TierD}
+          component={heroBase}
           options={({ navigation }) => ({
             headerTitle: 'Tier D heroes (7.30e)',
             headerStyle: {
@@ -148,7 +149,7 @@ const App = () => {
         />
         <Stack.Screen
           name='TierG'
-          component={TierG}
+          component={heroBase}
           options={({ navigation }) => ({
             headerTitle: 'Tier G heroes (7.30e)',
             headerStyle: {

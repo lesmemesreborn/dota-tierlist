@@ -1,4 +1,4 @@
-const data = [
+const cabdata = [
     {
       title: "Ну и кабачок 🍆",
       description: "Я понимаю твоего батю",
@@ -72,4 +72,4 @@ const data = [
           "https://i.ibb.co/jWGBfk6/cab4.jpg",
       },
   ];
-  export default data;
+  export default cabdata;
