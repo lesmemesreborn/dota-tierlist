@@ -12,7 +12,7 @@ import {
 import { FlatList } from 'react-native-gesture-handler'
 import heroData from '../heroes'
 
-const heroBase = ({ navigation, route }) => {
+const HeroBase = ({ navigation, route }) => {
   const [modalWindow, setModalWindow] = useState(false)
 
   const { heroes } = route.params
@@ -137,4 +137,4 @@ const styles = StyleSheet.create({
   },
 })
 
-export default heroBase
+export default HeroBase

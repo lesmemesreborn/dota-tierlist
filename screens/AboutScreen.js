@@ -4,6 +4,8 @@ import { Card, Title, Paragraph, Divider } from 'react-native-paper'
 import { LinearGradient } from 'expo-linear-gradient'
 
 const AboutScreen = ({ navigation }) => (
+
+
   <>
     <LinearGradient
       colors={['#154360', '#1F618D', '#2980B9', '#5DADE2']}
@@ -162,7 +164,6 @@ const styles = {
   },
   text_hidden: {
     color: '#2980B9',
-    textAlign: 'right',
     fontSize: 4,
     fontFamily: 'Open Sans',
   },

@@ -1,11 +1,36 @@
 import { Divider } from '@react-native-material/core'
 import { LinearGradient } from 'expo-linear-gradient'
-import React from 'react'
+import React, {useEffect, useState} from 'react'
 import { Image, StyleSheet, Text, View } from 'react-native'
+import axios from 'axios'
+import { dotaListApi } from '../api/stratz'
+
 
 const heroInfo = ({ route }) => {
   const hero = route.params
-  // const imagebg =  Background удаляй такое
+  const axios = require('axios');
+
+const [heroStats, setHeroStats] = useState([])
+
+useEffect(() =>{
+  ;(async () => {
+    setHeroStats(await dotaListApi.getHeroStats())
+  })()
+}, [])
+
+console.log(heroStats)
+
+// async function dota() {
+//   try {
+//     const response = await axios.get('https://api.opendota.com/api/heroStats');
+//     console.log(response);
+//   } catch (error) {
+//     console.error(error);
+//   }
+// }
+// console.log(dota)
+
+
 
   return (
     <LinearGradient

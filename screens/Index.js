@@ -2,9 +2,9 @@ import { LinearGradient } from 'expo-linear-gradient'
 import * as React from 'react'
 import { ScrollView } from 'react-native'
 import { Card, Title } from 'react-native-paper'
-import heroBase from './heroBase'
+// import HeroBase from './HeroBase'
 import heroData from '../heroes'
-import TierP from './Tierp'
+// import TierP from './Tierp'
 
 const IndexScreen = ({ navigation, route }) => {
   //скролл вью должно оборачивать все а не градиент
@@ -19,7 +19,7 @@ const IndexScreen = ({ navigation, route }) => {
           onPress={() =>
             navigation.navigate('HeroesList', {
               heroes: heroData.filter((item) => item.tier === 'SSS'),
-              headerTitle: 'ХУЙ',
+              headerTitle: 'Tier SS+ heroes',
             })
           }
         >
@@ -38,6 +38,7 @@ const IndexScreen = ({ navigation, route }) => {
           onPress={() =>
             navigation.navigate('HeroesList', {
               heroes: heroData.filter((item) => item.tier === 'S'),
+              headerTitle: 'Tier S heroes',
             })
           }
         >
@@ -49,7 +50,16 @@ const IndexScreen = ({ navigation, route }) => {
             <Title style={styles.title}>TIER S</Title>
           </Card.Content>
         </Card>
-        <Card style={styles.card} onPress={() => navigation.navigate('TierA')}>
+        <Card
+          style={styles.card}
+          onPress={() =>
+            navigation.navigate('HeroesList', {
+              heroes: heroData.filter((item) => item.tier === 'A'),
+              headerTitle: 'Tier A heroes',
+            })
+          }
+        >
+          
           <Card.Content style={styles.item}>
             <Card.Cover
               style={styles.body_cover}
@@ -58,7 +68,15 @@ const IndexScreen = ({ navigation, route }) => {
             <Title style={styles.title}>TIER A</Title>
           </Card.Content>
         </Card>
-        <Card style={styles.card} onPress={() => navigation.navigate('TierB')}>
+        <Card
+          style={styles.card}
+          onPress={() =>
+            navigation.navigate('HeroesList', {
+              heroes: heroData.filter((item) => item.tier === 'B'),
+              headerTitle: 'Tier B heroes',
+            })
+          }
+        >
           <Card.Content style={styles.item}>
             <Card.Cover
               style={styles.body_cover}
@@ -67,7 +85,15 @@ const IndexScreen = ({ navigation, route }) => {
             <Title style={styles.title}>TIER B</Title>
           </Card.Content>
         </Card>
-        <Card style={styles.card} onPress={() => navigation.navigate('TierC')}>
+        <Card
+          style={styles.card}
+          onPress={() =>
+            navigation.navigate('HeroesList', {
+              heroes: heroData.filter((item) => item.tier === 'C'),
+              headerTitle: 'Tier C heroes',
+            })
+          }
+        >
           <Card.Content style={styles.item}>
             <Card.Cover
               style={styles.body_cover}
@@ -76,7 +102,15 @@ const IndexScreen = ({ navigation, route }) => {
             <Title style={styles.title}>TIER C</Title>
           </Card.Content>
         </Card>
-        <Card style={styles.card} onPress={() => navigation.navigate('TierD')}>
+        <Card
+          style={styles.card}
+          onPress={() =>
+            navigation.navigate('HeroesList', {
+              heroes: heroData.filter((item) => item.tier === 'D'),
+              headerTitle: 'Tier D heroes',
+            })
+          }
+        >
           <Card.Content style={styles.item}>
             <Card.Cover
               style={styles.body_cover}
@@ -85,7 +119,15 @@ const IndexScreen = ({ navigation, route }) => {
             <Title style={styles.title}>TIER D</Title>
           </Card.Content>
         </Card>
-        <Card style={styles.card} onPress={() => navigation.navigate('TierG')}>
+        <Card
+          style={styles.card}
+          onPress={() =>
+            navigation.navigate('HeroesList', {
+              heroes: heroData.filter((item) => item.tier === 'G'),
+              headerTitle: 'Tier G heroes',
+            })
+          }
+        >
           <Card.Content style={styles.item}>
             <Card.Cover
               style={styles.body_cover}
