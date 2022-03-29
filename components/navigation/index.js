@@ -1,8 +1,7 @@
-import { View, Text } from 'react-native'
+import { TouchableOpacity } from 'react-native'
 import React from 'react'
 import { NavigationContainer } from '@react-navigation/native'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
-
 import AboutScreen from '../../screens/AboutScreen'
 import Cabs from '../../screens/CabScreen'
 import heroBase from '../../screens/HeroBase'
@@ -11,6 +10,9 @@ import TierP from '../../screens/Tierp'
 import SignInScreen from '../../screens/SignInScreen'
 import RegisterScreen from '../../screens/RegisterScreen'
 import IndexScreen from '../../screens/Index'
+import { MaterialIcons } from '@expo/vector-icons'
+import FavoritesScreen from '../../screens/FavoritesScreen'
+import heroData from '../../heroes'
 
 const Stack = createNativeStackNavigator()
 
@@ -23,14 +25,21 @@ const Navigation = () => {
         name='Index'
         component={IndexScreen}
         options={({ navigation, route }) => ({
-          headerTitle: 'Dota 2 hero tierlist (7.30e)',
+          headerTitle: 'Dota 2 Hero Tierlist (7.30e)',
+          headerRight: () => (
+            <TouchableOpacity onPress={() => navigation.navigate('FavoritesScreen', {
+              heroes: heroData.filter((item) => item.isFav === true)
+            })}>
+              <MaterialIcons name="favorite" size={24} color="#412ACA" />
+            </TouchableOpacity>
+          ),
           headerStyle: {
             backgroundColor: '#85C1E9',
           },
           headerTintColor: 'navy',
           headerTitleStyle: {
             fontWeight: '700',
-            fontSize: 24,
+            fontSize: 20,
           },
         })}
       />
@@ -122,6 +131,21 @@ const Navigation = () => {
         component={RegisterScreen}
         options={({ navigation }) => ({
           headerShown: false,
+        })}
+      />
+       <Stack.Screen
+        name='FavoritesScreen'
+        component={FavoritesScreen}
+        options={({ navigation }) => ({
+          headerTitle: 'Hero Information',
+          headerStyle: {
+            backgroundColor: '#85C1E9',
+          },
+          headerTintColor: 'navy',
+          headerTitleStyle: {
+            fontWeight: '700',
+            fontSize: 24,
+          },
         })}
       />
     </Stack.Navigator>

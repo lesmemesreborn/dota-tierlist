@@ -28,26 +28,26 @@ const onRegisterPressed = () => {
         name="username"
         control={control}
         placeholder="Username"
-        rules={{required: 'Username is required', minLength: {value: 3, message: 'Min 3 characters'}, maxLength: {value: 26, message: 'Max 26 characters'}}} />
+        rules={{required: 'Введите имя пользователя', minLength: {value: 3, message: 'Min 3 characters'}, maxLength: {value: 26, message: 'Max 26 characters'}}} />
          <CustomInput 
       name="email"
       control={control}
       placeholder="Email"
-      rules={{required: 'Email is required', minLength: {value: 3, message: 'Min 3 characters'}}} />
+      rules={{required: 'Введите Email', minLength: {value: 3, message: 'Min 3 characters'}}} />
         <CustomInput 
          name="password"
          control={control}
          placeholder="Password"
          secureTextEntry
-         rules={{required: 'Pass is required', minLength: {value: 3, message: 'Min 3 characters'}}} />
+         rules={{required: 'Введите пароль', minLength: {value: 3, message: 'Min 3 characters'}}} />
          <CustomInput 
          name="password-repeat"
          control={control}
          placeholder="Repeat Password"
          secureTextEntry
-         rules={{validate: value => value === pwd || 'Password do not match' }} />
+         rules={{validate: value => value === pwd || 'Пароли не совпадают' }} />
         <CustomButton text="Register" onPress={onRegisterPressed}/>
-        <Text style = {{fontSize: 8, fontStyle: 'italic'}}>By registering, you confirm that you accept my marrow... </Text>
+        <Text style = {{fontSize: 8, fontStyle: 'italic'}}>Регистрируясь, вы принимаете блаблабла... да вообще, это тестовое приложение, камон. </Text>
         </View>
     )
     }

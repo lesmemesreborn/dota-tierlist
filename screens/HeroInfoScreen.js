@@ -18,19 +18,6 @@ useEffect(() =>{
   })()
 }, [])
 
-console.log(heroStats)
-
-// async function dota() {
-//   try {
-//     const response = await axios.get('https://api.opendota.com/api/heroStats');
-//     console.log(response);
-//   } catch (error) {
-//     console.error(error);
-//   }
-// }
-// console.log(dota)
-
-
 
   return (
     <LinearGradient

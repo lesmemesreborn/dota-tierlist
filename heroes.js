@@ -5,6 +5,7 @@ const heroData = [
     name: 'Tinker',
     desc: 'Абсолютно нечестный герой в нынешнем патче. Что при себе имеет: \n - Слишком большой урон с двух кнопок; \n - Меньшую зависимость от таймингов (травела теперь не нужны); \n - Сломанную матрицу, являющуюся кошмаром во плоти (максимум резиста к станам и урону, возможность блинковаться из-под периодического урона); \n - Аганим с АоЕ. \n - Слишком сильный герой в патче. Винрейт 55%+ на всех рейтингах, это жесть. ',
     tier: 'SSS',
+    isFav: true
   },
   {
     img: 'https://static.wikia.nocookie.net/dota2_gamepedia/images/0/09/Weaver_icon.png/revision/latest/scale-to-width-down/256?cb=20160411214233',
@@ -12,6 +13,7 @@ const heroData = [
     name: 'Weaver',
     desc: 'Очень флексовый герой, играющий на любой позиции. Чтобы убить жуков, нужно 2439684396862 ударов, а урона даже на начальных стадиях полно. Я уж не говорю, что это пермабан на всех турнирах, даже виспа обогнал в этом плане.',
     tier: 'S',
+    isFav: true
   },
   {
     img: 'https://static.wikia.nocookie.net/dota2_gamepedia/images/1/10/Outworld_Destroyer_icon.png/revision/latest/scale-to-width-down/256?cb=20160411220923',
@@ -847,34 +849,5 @@ const heroData = [
     tier: 'G',
   },
 ]
-
-const TierSSS = heroData.filter(function (hero) {
-  return hero.tier == 'SSS'
-})
-
-//     const TierS = heroData.filter(function(hero) {
-//         return hero.tier == 'S'
-//     })
-
-//     const TierA = heroData.filter(function(hero) {
-//         return hero.tier == 'A'
-//     })
-
-//     const TierB = heroData.filter(function(hero) {
-//         return hero.tier == 'B'
-//     })
-
-//     const TierC = heroData.filter(function(hero) {
-//         return hero.tier == 'C'
-//     })
-
-//     const TierD = heroData.filter(function(hero) {
-//         return hero.tier == 'D'
-//     })
-
-//     const TierG = heroData.filter(function(hero) {
-//         return hero.tier == 'G'
-//     })
-// console.log(TierS)
 
 export default heroData

@@ -12,9 +12,8 @@ import {
 } from 'react-native'
 
 
-const HeroBase = ({ navigation, route }) => {
+const FavoritesScreen = ({ navigation, route }) => {
   const [modalWindow, setModalWindow] = useState(false)
-
   const { heroes } = route.params
 
   return (
@@ -136,5 +135,4 @@ const styles = StyleSheet.create({
     flex: 1,
   },
 })
-
-export default HeroBase
+export default FavoritesScreen

@@ -43,19 +43,19 @@ const onGuest = () => {
         name="username"
         placeholder="Username"
         control={control}
-        rules={{required: 'Username is required', minLength: {value: 3, message: 'Min 3 characters'}}}
+        rules={{required: 'Введите имя пользователя', minLength: {value: 3, message: 'Min 3 characters'}}}
         />
         <CustomInput 
         name='password'
         placeholder="Password"
         secureTextEntry = {true}
         control={control}
-        rules={{required: 'Password is required', minLength: {value: 3, message: 'Min 3 characters'}}}/>
+        rules={{required: 'Введите пароль', minLength: {value: 3, message: 'Min 3 characters'}}}/>
  
-        <CustomButton text="Sign In" onPress={handleSubmit(onSignInPressed)}/>
-        <CustomButton text="Register" onPress={onRegister}/>
-        <CustomButton text="Forgot password?" onPress={onForgotPasswordPressed}/>
-        <CustomButton text="Continue as a guest" onPress={onGuest}/>
+        <CustomButton text="Войти" onPress={handleSubmit(onSignInPressed)}/>
+        <CustomButton text="Зарегистрироваться" onPress={onRegister}/>
+        <CustomButton text="Забыли пароль?" onPress={onForgotPasswordPressed}/>
+        <CustomButton text="Войти как гость" onPress={onGuest}/>
         </View>
     )
     }

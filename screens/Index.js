@@ -6,6 +6,7 @@ import { Card, Title } from 'react-native-paper'
 import heroData from '../heroes'
 // import TierP from './Tierp'
 
+
 const IndexScreen = ({ navigation, route }) => {
   //скролл вью должно оборачивать все а не градиент
   return (
