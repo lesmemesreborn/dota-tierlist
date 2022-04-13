@@ -8,7 +8,6 @@ import heroData from '../heroes'
 
 
 const IndexScreen = ({ navigation, route }) => {
-  //скролл вью должно оборачивать все а не градиент
   return (
     <ScrollView>
       <LinearGradient

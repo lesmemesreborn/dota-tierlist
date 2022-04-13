@@ -108,7 +108,7 @@ const Navigation = () => {
         name='TierP'
         component={TierP}
         options={({ navigation }) => ({
-          headerTitle: 'Герои для пидорасов',
+          headerTitle: 'Очень нехорошие герои',
           headerStyle: {
             backgroundColor: '#FF0018',
           },
