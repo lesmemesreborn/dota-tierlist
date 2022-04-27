@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-import { Image, View, Text, StyleSheet, Dimensions } from 'react-native'
+import React from 'react'
+import {Dimensions, Image, Text, View} from 'react-native'
 
 const Cabs = () => {
   return (

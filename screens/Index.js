@@ -1,7 +1,7 @@
-import { LinearGradient } from 'expo-linear-gradient'
+import {LinearGradient} from 'expo-linear-gradient'
 import * as React from 'react'
-import { ScrollView } from 'react-native'
-import { Card, Title } from 'react-native-paper'
+import {ScrollView} from 'react-native'
+import {Card, Title} from 'react-native-paper'
 // import HeroBase from './HeroBase'
 import heroData from '../heroes'
 // import TierP from './Tierp'
@@ -178,7 +178,6 @@ const styles = {
     justifyContent: 'space-between',
     flexDirection: 'row',
     margin: 3,
-    borderWidth: 1,
     height: 80,
   },
   title: {

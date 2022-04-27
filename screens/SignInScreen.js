@@ -1,10 +1,9 @@
-import React, {useState, useContext} from 'react';
-import {View, StyleSheet, useWindowDimensions, TextInput, Textarea, Input, Button, Text, Image, Dimensions } from 'react-native'
+import React from 'react';
+import {Dimensions, Image, StyleSheet, Text, View} from 'react-native'
 import CustomInput from '../components/CustomInput';
 import CustomButton from '../components/CustomButton';
-import { useNavigation } from '@react-navigation/native';
-import {useForm, Controller} from 'react-hook-form'
-
+import {useNavigation} from '@react-navigation/native';
+import {useForm} from 'react-hook-form'
 
 
 const SignInScreen = () => {
@@ -19,7 +18,7 @@ formState: {errors} } = useForm({defaultValue: {
 
 console.log(errors)
 
-   const onSignInPressed = (data) => {
+const onSignInPressed = (data) => {
        console.warn('Скоро будет доступно')
 
    }

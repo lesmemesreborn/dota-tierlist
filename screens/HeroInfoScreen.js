@@ -1,16 +1,19 @@
-import { Divider } from '@react-native-material/core'
-import { LinearGradient } from 'expo-linear-gradient'
+import {Divider} from '@react-native-material/core'
+import {LinearGradient} from 'expo-linear-gradient'
 import React, {useEffect, useState} from 'react'
-import { Image, StyleSheet, Text, View } from 'react-native'
-import axios from 'axios'
-import { dotaListApi } from '../api/stratz'
+import {Image, StyleSheet, Text, View} from 'react-native'
+import {dotaListApi} from '../api/stratz'
+import { store } from '../src/store'
+import {Provider} from 'react-redux'
 
 
 const heroInfo = ({ route }) => {
   const hero = route.params
   const axios = require('axios');
 
+
 const [heroStats, setHeroStats] = useState([])
+
 
 useEffect(() =>{
   ;(async () => {
@@ -20,7 +23,8 @@ useEffect(() =>{
 
 
   return (
-    <LinearGradient
+    <Provider store={store}>
+   <LinearGradient
       colors={['#154360', '#1F618D', '#2980B9', '#5DADE2']}
       style={styles.linearGradient}
     >
@@ -34,6 +38,7 @@ useEffect(() =>{
         <Divider color='black' />
       </View>
     </LinearGradient>
+    </Provider>
   )
 }
 

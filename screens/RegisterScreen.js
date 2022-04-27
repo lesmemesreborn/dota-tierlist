@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
-import { StyleSheet, View, Image, Dimensions } from 'react-native';
-import { Text } from 'react-native-elements';
+import React from 'react';
+import {Dimensions, Image, StyleSheet, View} from 'react-native';
+import {Text} from 'react-native-elements';
 import CustomButton from '../components/CustomButton';
 import CustomInput from '../components/CustomInput';
-import { useNavigation } from '@react-navigation/native';
-import {useForm, Controller} from 'react-hook-form'
+import {useNavigation} from '@react-navigation/native';
+import {useForm} from 'react-hook-form'
 
 
 const RegisterScreen = () => {

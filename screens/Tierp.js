@@ -1,16 +1,8 @@
-import { FontAwesome5 } from '@expo/vector-icons'
-import React, { useState } from 'react'
-import {
-  Image,
-  ImageBackground,
-  Modal,
-  StyleSheet,
-  Text,
-  TouchableOpacity,
-  View,
-} from 'react-native'
-import { FlatList } from 'react-native-gesture-handler'
-import { LinearGradient } from 'expo-linear-gradient'
+import {FontAwesome5} from '@expo/vector-icons'
+import React, {useState} from 'react'
+import {Image, Modal, StyleSheet, Text, TouchableOpacity, View,} from 'react-native'
+import {FlatList} from 'react-native-gesture-handler'
+import {LinearGradient} from 'expo-linear-gradient'
 
 export default function TierP({ navigation }) {
   const [heroData] = useState([

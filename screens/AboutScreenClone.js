@@ -1,6 +1,6 @@
-import React, { useState } from 'react'
-import { StyleSheet, View, Text, TouchableOpacity, Modal } from 'react-native'
-import { Button, ListItem, Avatar } from '@react-native-material/core'
+import React from 'react'
+import {StyleSheet, View} from 'react-native'
+import {Avatar, ListItem} from '@react-native-material/core'
 
 const AboutScreen = ({ navigation }) => {
   return (

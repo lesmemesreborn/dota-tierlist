@@ -10,7 +10,7 @@ name={name}
 rules={rules}
 render={({field: {value, onChange, onBlur}, fieldState: {error}}) => (
     <>
-    <View style={styles.container, {borderColor: error ? 'red' : '#e8e8e8'}}>
+    <View style={styles.container}>
 <TextInput value={value}
  onChangeText={onChange} 
  onBlur={onBlur}
@@ -37,7 +37,11 @@ const styles = StyleSheet.create({
         marginVertical: 10,
     },
     input: {
+      paddingLeft: 2
     }
 })
 
 export default CustomInput
+
+
+// {borderColor: error ? 'red' : '#e8e8e8'}

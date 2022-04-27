@@ -1,7 +1,7 @@
 import * as React from 'react'
-import { Text, ScrollView, Image, TouchableOpacity } from 'react-native'
-import { Card, Title, Paragraph, Divider } from 'react-native-paper'
-import { LinearGradient } from 'expo-linear-gradient'
+import {Image, ScrollView, Text, TouchableOpacity} from 'react-native'
+import {Divider} from 'react-native-paper'
+import {LinearGradient} from 'expo-linear-gradient'
 
 const AboutScreen = ({ navigation }) => (
 
@@ -128,7 +128,6 @@ const styles = {
     justifyContent: 'space-between',
     flexDirection: 'row',
     margin: 3,
-    borderWidth: 1,
     height: 80,
   },
   title: {

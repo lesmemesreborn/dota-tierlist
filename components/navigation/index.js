@@ -25,12 +25,10 @@ const Navigation = () => {
         name='Index'
         component={IndexScreen}
         options={({ navigation, route }) => ({
-          headerTitle: 'Dota 2 Hero Tierlist (7.30e)',
+          headerTitle: 'Dota 2 Hero Tierlist (7.31e)',
           headerRight: () => (
-            <TouchableOpacity onPress={() => navigation.navigate('FavoritesScreen', {
-              heroes: heroData.filter((item) => item.isFav === true)
-            })}>
-              <MaterialIcons name="favorite" size={24} color="#412ACA" />
+            <TouchableOpacity onPress={() => navigation.navigate('FavoritesScreen', {route})}>
+              <MaterialIcons name="favorite" size={24} color="#412ACD" />
             </TouchableOpacity>
           ),
           headerStyle: {
@@ -136,7 +134,7 @@ const Navigation = () => {
        <Stack.Screen
         name='FavoritesScreen'
         component={FavoritesScreen}
-        options={({ navigation }) => ({
+        options={({ navigation, route }) => ({
           headerTitle: 'Hero Information',
           headerStyle: {
             backgroundColor: '#85C1E9',
@@ -155,3 +153,8 @@ const Navigation = () => {
 }
 
 export default Navigation
+
+
+//{
+//               heroes: heroData.filter((item) => item.isFav === true)
+//             }

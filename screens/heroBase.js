@@ -1,15 +1,7 @@
-import { FontAwesome5 } from '@expo/vector-icons'
-import { LinearGradient } from 'expo-linear-gradient'
-import React, { useState } from 'react'
-import {
-  Image,
-  Modal,
-  StyleSheet,
-  Text,
-  TouchableOpacity,
-  View,
-  FlatList
-} from 'react-native'
+import {FontAwesome5} from '@expo/vector-icons'
+import {LinearGradient} from 'expo-linear-gradient'
+import React, {useState} from 'react'
+import {FlatList, Image, Modal, StyleSheet, Text, TouchableOpacity, View} from 'react-native'
 
 
 const HeroBase = ({ navigation, route }) => {
@@ -55,6 +47,7 @@ const HeroBase = ({ navigation, route }) => {
                     name: data.item.name,
                     img: data.item.img,
                     desc: data.item.desc,
+                    isFav: data.item.isFav
                   })
                 }
               >
